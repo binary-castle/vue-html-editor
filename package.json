@@ -28,11 +28,11 @@
     "contenteditable",
     "plugins"
   ],
-  "author": "Your Name",
+  "author": "BinaryCastle",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/binarycastle/vue-html-editor.git"
+    "url": "https://github.com/binary-castle/vue-html-editor"
   },
   "scripts": {
     "dev": "vite",
