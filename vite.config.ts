@@ -6,7 +6,17 @@ import dts from 'vite-plugin-dts'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), tailwindcss(), dts()],
+  plugins: [vue(), tailwindcss(), dts({
+    exclude: ['src/**/*.test.*', 'src/**/*.spec.*'],
+    copyDtsFiles: true,
+    rollupTypes: true,
+    tsconfigPath: './tsconfig.app.json',
+    compilerOptions: {
+      moduleResolution: 2, // 2 = Node
+      allowSyntheticDefaultImports: true,
+      esModuleInterop: true
+    }
+  })],
   build: {
     lib: {
       entry: 'src/lib/index.ts',
