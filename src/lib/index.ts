@@ -1,3 +1,5 @@
+import '../style.css'
+
 // Main component export
 export { default as VHtmlEditor } from './VHtmlEditor.vue'
 
