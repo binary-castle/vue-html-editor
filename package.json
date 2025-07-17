@@ -1,0 +1,62 @@
+{
+  "name": "vue-html-editor",
+  "version": "1.0.0",
+  "description": "A powerful and extensible HTML editor component for Vue 3 with plugin support",
+  "type": "module",
+  "main": "./dist/vue-html-editor.umd.js",
+  "module": "./dist/vue-html-editor.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-html-editor.es.js",
+      "require": "./dist/vue-html-editor.umd.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./dist/style.css": "./dist/vue-html-editor.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "html-editor",
+    "rich-text-editor",
+    "editor",
+    "wysiwyg",
+    "contenteditable",
+    "plugins"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binarycastle/vue-html-editor.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "build:lib": "vue-tsc -b && vite build --mode lib",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "@vue/tsconfig": "^0.7.0",
+    "semantic-release": "^24.2.7",
+    "tailwindcss": "^4.1.11",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.5.17",
+    "vue-tsc": "^2.2.12"
+  }
+}
