@@ -32,7 +32,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/binary-castle/vue-html-editor.git"
+    "url": "https://github.com/binary-castle/vue-html-editor"
   },
   "scripts": {
     "dev": "vite",
