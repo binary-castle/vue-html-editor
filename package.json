@@ -1,6 +1,6 @@
 {
-  "name": "vue-html-editor",
-  "version": "1.0.0",
+  "name": "@binarycastle/vue-html-editor",
+  "version": "0.0.1",
   "description": "A powerful and extensible HTML editor component for Vue 3 with plugin support",
   "type": "module",
   "main": "./dist/vue-html-editor.umd.js",
