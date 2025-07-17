@@ -1,18 +1,19 @@
 {
   "name": "@binarycastle/vue-html-editor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A powerful and extensible HTML editor component for Vue 3 with plugin support",
   "private": false,
   "type": "module",
   "main": "./dist/vue-html-editor.umd.js",
   "module": "./dist/vue-html-editor.es.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/vue-html-editor.es.js",
       "require": "./dist/vue-html-editor.umd.js"
     },
+    "./dist/vue-html-editor.css": "./dist/vue-html-editor.css",
     "./dist/style.css": "./dist/vue-html-editor.css"
   },
   "files": [
