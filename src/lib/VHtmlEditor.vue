@@ -357,7 +357,7 @@ onUnmounted(() => {
         ref="toolbarRef"
         @mouseenter="isToolbarHovered = true"
         @mouseleave="isToolbarHovered = false; hideToolbar()"
-        class="fixed z-10000 bg-gray-800 text-white rounded-lg shadow-lg p-2 flex items-center space-x-1"
+        class="fixed z-[10000] bg-gray-800 text-white rounded-lg shadow-lg p-2 flex items-center space-x-1"
       >
         <button
           v-for="plugin in pluginRegistry.getPlugins()"
