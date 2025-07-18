@@ -7,12 +7,14 @@ interface Props {
   toolbarAlwaysShow?: boolean
   plugins?: EditorPlugin[]
   css?: string
+  noEditorClasses?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   toolbarAlwaysShow: false,
   plugins: () => defaultPlugins,
-  css: ''
+  css: '',
+  noEditorClasses: false
 })
 
 const model = defineModel<string>()
@@ -341,9 +343,11 @@ onUnmounted(() => {
       @click="onCursorChange"
       @focus="onEditorFocus"
       @blur="onEditorBlur"
-      class="min-h-32 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent prose prose-sm max-w-none"
-      :class="{ 'editor-styled': props.css }"
-      style="white-space: pre-wrap;"
+      :class="!props.noEditorClasses ? [
+        'min-h-32 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent prose prose-sm max-w-none',
+        { 'editor-styled': props.css }
+      ] : { 'editor-styled': props.css }"
+      :style="!props.noEditorClasses ? 'white-space: pre-wrap;' : undefined"
     />
 
     <!-- Floating Toolbar -->
@@ -353,7 +357,7 @@ onUnmounted(() => {
         ref="toolbarRef"
         @mouseenter="isToolbarHovered = true"
         @mouseleave="isToolbarHovered = false; hideToolbar()"
-        class="fixed z-50 bg-gray-800 text-white rounded-lg shadow-lg p-2 flex items-center space-x-1"
+        class="fixed z-10000 bg-gray-800 text-white rounded-lg shadow-lg p-2 flex items-center space-x-1"
       >
         <button
           v-for="plugin in pluginRegistry.getPlugins()"
